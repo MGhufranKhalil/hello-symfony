@@ -5,4 +5,4 @@
 
 # app_lucky_number:
 #    path: /lucky/number
-#    controller: App\Controller\HelloController::number
+#    controller: App\Controller\FirstController::number

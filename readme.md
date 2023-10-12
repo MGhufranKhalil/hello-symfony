@@ -1,13 +1,10 @@
-Symfony
+# Learn Symfony
 
-Installation:
-============
-
-# Install Scoop 
+## Install Scoop 
 What is scoop? It is package manager like other package manager 
 
 
-# Install symfony cli using scoop
+## Install symfony cli using scoop
 cmd: scoop install symfony-cli
 
 
@@ -39,10 +36,10 @@ There are 2 methods to write routes in symfony
 
 # config/routes.yaml
 
-# the "app_lucky_number" route name is not important yet
+the "app_lucky_number" route name is not important yet
 app_lucky_number:
     path: /lucky/number
-    controller: App\Controller\LuckyController::number
+    controller: App\Controller\FirstController::number
 
 
 2. 
@@ -66,5 +63,29 @@ Route use statement should be added on the top of the file
 
 Response use statement should be added on top of the file 
 
+## Templates
+
+For UI symfony use twig it is more like JS
+
+### Twig Uses 
+
+Print variable 
+    {{ variableName }}
+
+Comment
+    {# This is comment #}
+
+Do something 
+    {% if %} {% endif %}, {%for ()%} {% endfor%} etc
+
+Templating
+
+For extends
+    {% extends 'base.html.twig' %}
+
+Content That needs to be extended
+    {% block body %} {% endblock %}
+    
+For more learning check https://twig.symfony.com/
 
 

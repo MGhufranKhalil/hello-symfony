@@ -3,6 +3,16 @@
 {% block title %}Print Loop | {{ parent() }} {% endblock %}
 
 {% block body %}
+    <a class="navbar-brand" href="{{ path('add_number',{
+        a:10,b:20
+    }) }}">
+        <i class="fas fa-record-vinyl"></i>
+        Add Number
+    </a>
+    <a class="navbar-brand" href="{{ path('show_number') }}">
+        <i class="fas fa-record-vinyl"></i>
+        Print Number
+    </a>
     <ul>
         {% for track in tracks %}
             <li>

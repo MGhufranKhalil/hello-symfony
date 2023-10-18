@@ -10,7 +10,7 @@ class FirstController extends AbstractController
 {
 
     /**
-     * @Route("/lucky/number")
+     * @Route("/lucky/number",name="show_number")
      */	
     public function number() : Response 
     {
@@ -19,7 +19,7 @@ class FirstController extends AbstractController
     }
 
     /**
-     * @Route("/add/{a}/{b}")
+     * @Route("/add/{a}/{b}",name="add_number")
      */	
     public function addNumber(int $a = 0, int $b = 0) : Response 
     {

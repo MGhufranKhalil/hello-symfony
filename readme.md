@@ -15,6 +15,8 @@ cmd: symfony new --webapp my_project
 For Microservices, APIs or console application
 cmd: symfony new my_project 
 
+## Start 
+    symfony server:start
 
 ## DIRECTORY:
  
@@ -88,4 +90,28 @@ Content That needs to be extended
     
 For more learning check https://twig.symfony.com/
 
+### Assets  
+Add Assets in public folders and give relative path in your files
+    <link rel="stylesheet" href="/css/styles.css" />
+
+Also you can use asset function
+    <link rel="stylesheet" href="{{ asset ('css/styles.css') }}" />
+
+make sure you have runned the following command before using asset function 
+    composer require symfony/asset
+
+## Router
+check all routes using the following command
+    php bin/console debug:router
+
+For Menus use path function and give route name in it
+    <a class="navbar-brand" href="{{ path('app_homepage') }}">
+        <i class="fas fa-record-vinyl"></i>
+        Home
+    </a>
+
+For give custom name use the following code in controller
+
+before using this make sure you have runned the following command if you have PHP 7 and earlier versions
+    composer require doctrine/annotations
 
